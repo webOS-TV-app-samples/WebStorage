@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+@font-face {
+	font-family: "Miso";
+	src: local("/font/miso.otf")
+}
+
+body {
+		font-family: "Miso", serif; 
+		width: 100%; 
+		height: 100%;
+		background-color: #202020;
+} 
+
+div {
+	    position:absolute; 
+		height:100%; 
+		width:100%;
+		display: table;
+		font-size: 60px;
+		color: #ffffff;
+}
+
+lg_red { 
+		color: #d80546;		
+
+}
+
+button {
+		height: 80px;
+		font-size: 60px;
+}
+
+</style>
+
+<script type="text/javascript" charset="utf-8">
+
+function clickCounter() {
+	if(typeof(Storage) !== "undefinded") {
+
+		// Check Local Storage
+		if (localStorage.clickcount) {
+			localStorage.clickcount = Number(localStorage.clickcount) + 1;
+		} else {
+			localStorage.clickcount = 1;
+		}
+
+		// Check Session Storage
+		if (sessionStorage.clickcount) {
+			sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+		} else {
+			sessionStorage.clickcount = 1;
+		}
+		document.getElementById("resultLocal").innerHTML = "LOCAL Storage: <lg_red>" + localStorage.clickcount + "</lg_red> time(s).";
+		document.getElementById("resultSession").innerHTML = "SESSION Storage: <lg_red>" + sessionStorage.clickcount + "</lg_red> time(s).";
+	} else {
+		document.getElementById("resultLocal").innerHTML = "Sorry, your browser does not support web storage function.";
+		document.getElementById("resultSession").innerHTML = "Sorry, your browser does not support web storage function.";
+	}
+}
+
+</script>
+
+</head>
+<body onload="clickCounter()">
+	<div> 
+		<h1 id="resultLocal">Hello! World!</h1>
+		<h1 id="resultSession">Hello! World!</h1>
+		<button onclick="clickCounter()" type="button" style="font-family: 'Miso';"><b>Click Here to <lg_red>Add Count</b></lg_red>!</button>
+	</div>
+</body>
+</html>
