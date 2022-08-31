@@ -1,22 +1,12 @@
 {
-	"id": "com.lgdev.webstoragesample",
-	"version": "2.0.0",
-	"vendor": "LG Developer",
-	"type": "web",
-	"main": "index.html",
-	"title": "Web Storage",
-	"appDescription": "Let's see how the local storage and session storage work",
-	"icon": "icon.png",
-	"largeIcon": "largeIcon.png",
-	"uiRevision":2,
-	"enyoVersion": "2.3.0",
-	"onDeviceSource": {
-		"enyo": "$enyo-framework/2.3.0/enyo",
-		"lib/layout": "$enyo-framework/2.3.0/lib/layout",
-		"lib/moonstone": "$enyo-framework/2.3.0/lib/moonstone",
-		"lib/spotlight": "$enyo-framework/2.3.0/lib/spotlight",
-		"lib/enyo-ilib": "$enyo-framework/2.3.0/lib/enyo-ilib",
-		"lib/enyo-cordova": "$enyo-framework/2.3.0/lib/enyo-cordova",
-		"lib/enyo-webos": "$enyo-framework/2.3.0/lib/enyo-webos"
-	}
+  "id": "com.sample.webstorage",
+  "version": "1.0.0",
+  "vendor": "LG Developer",
+  "type": "web",
+  "main": "index.html",
+  "title": "Web Storage",
+  "appDescription": "Let's see how the local storage and session storage work",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "uiRevision": 2
 }
