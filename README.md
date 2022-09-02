@@ -16,17 +16,11 @@ every server request. However, with current HTML standards, the local storage is
 can be stored locally, without affecting website performance.
 
 Unlike cookies, the storage limit is far larger (at least 5 MB), and the information is never transferred to the server.
-If you are planning or developing a game for webOS TV, you can use this local storage to save the user’s final score or
-owned items.
-
 Note that the data in local storage can be deleted by the "Initial setting" menu (factory reset). Using a remote server
 is recommended to keep your data. The data can also be deleted depending on the following app types and conditions.
 
 - Packaged app: The data is deleted when users update or remove your app on webOS TV.
-
-- [Hosted app](https://webostv.developer.lge.com/develop/getting-started/web-app-types#hosted-web-app/): The data is
-  deleted when
-  the total usage of data reaches the limit.
+- [Hosted app](https://webostv.developer.lge.com/develop/getting-started/web-app-types#hosted-web-app): The data is deleted when the total usage of data reaches the limit.
 
 Note that since version 3.5 of webOS TV, the local storage size is limited to 16MB.
 
@@ -51,8 +45,7 @@ document.getElementById("resultLocal").innerHTML =
 Unlike the local storage saves its value persistently, the session storage keeps its value on the browser only for the
 duration of the session. In the view of the app lifetime, it maintains a storage area that is available for the duration
 of the page session. For the webOS TV, you can see your stored values are cleared if you turn off your app after using
-the session storage in your app. For example, you are also able to use the session storage for the game score or item
-which has to be reset whenever the user starts a new game.
+the session storage in your app.
 
 Also, to check and retrieve the session storage, we added the clickcount() method in the below code. The following
 example counts the number of times a user has clicked a button, in the current session:
@@ -70,16 +63,13 @@ document.getElementById("resultSession").innerHTML =
   "SESSION Storage: " + sessionStorage.clickcount + " time(s).";
 ```
 
-## Result in the webOS TV Emulator
+## Result in the webOS TV
 
-You can launch and see the sample app result in the webOS TV Emulator as below image.
+You can launch and see the sample app result in the webOS TV as below image.
 
-![The result image of the sample app](https://webostv.developer.lge.com/download_file/view_inline/2129/)
+![The result image of the sample app](screenshots/com.sample.webstorage.PNG)
 
 ## Do’s and Don’ts
 
-- **Do** test this sample app on your webOS TV emulator or real webOS TV.
-
-- **Do** turn off your app in the webOS TV emulator or webOS TV and check how the value is changed.
-
-- **Don’t** forget to shout “Hurray!” when you see the expected results about local storage and session storage.
+- **Do** test this sample app on your webOS TV.
+- **Do** exit your app in the webOS TV and check how the value is changed.
